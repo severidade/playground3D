@@ -86,6 +86,7 @@ body::-webkit-scrollbar {
   border-radius: 20px;
   border: solid 1px var(--color-light-gray);
   margin: 5vh;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 1024px) {

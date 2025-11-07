@@ -1,25 +1,4 @@
-/* eslint-disable react/no-unknown-property */
-import * as THREE from 'three';
-
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Box, OrbitControls } from '@react-three/drei';
-import { useRef } from 'react';
-
-function TestBox() {
-  const boxRef = useRef<THREE.Mesh>(null);
-
-  useFrame(() => {
-    if (boxRef.current) {
-      boxRef.current.rotation.y += 0.01;
-    }
-  });
-
-  return (
-    <Box ref={boxRef}>
-      <meshStandardMaterial color="#f7c130" />
-    </Box>
-  );
-}
+import MainScene from './three/scenes/MainScene.tsx';
 
 function App() {
   return (
@@ -28,17 +7,9 @@ function App() {
       <h2 className="subtitle">
         Configurado usando o modelo desenvolvido por Marco Severo
       </h2>
-
       <div className="stage">
-        <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[5, 5, 5]} intensity={2} />
-          <TestBox />
-          <OrbitControls />
-        </Canvas>
-
+        <MainScene />
       </div>
-
       <footer>
         <nav aria-label="Redes sociais">
           <ul className="menu_social">

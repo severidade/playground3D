@@ -71,3 +71,22 @@ export default defineConfig([
   },
 ])
 ```
+
+
+Eestrutura de pastas bem organizada para o 3d:
+src/
+├── assets/             # texturas, HDRIs, modelos .glb/.gltf
+├── components/         # componentes comuns da interface
+├── three/              # 🎨 tudo do mundo 3D
+│   ├── elements/       # objetos individuais (Box, Sphere, etc.)
+│   │   ├── TestBox.jsx
+│   │   └── FloatingSphere.jsx
+│   ├── scenes/         # combina vários elementos
+│   │   └── MainScene.jsx
+│   ├── lights/         # configurações de iluminação
+│   │   └── DefaultLights.jsx
+│   ├── controls/       # orbit, scroll ou gsap animations
+│   │   └── OrbitController.jsx
+│   └── helpers/        # grids, axes, perf monitor etc.
+│       └── GridHelper.jsx
+└── App.jsx
