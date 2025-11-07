@@ -80,6 +80,14 @@ body::-webkit-scrollbar {
   color: var(--color-title-primary);
 }
 
+.stage {
+  width: 60vw;
+  height: 50vh;
+  border-radius: 20px;
+  border: solid 1px var(--color-light-gray);
+  margin: 5vh;
+}
+
 @media only screen and (min-width: 1024px) {
   .app_title {
     font-size: 5vw;

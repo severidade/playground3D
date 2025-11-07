@@ -8,14 +8,17 @@ function App() {
       <h2 className="subtitle">
         Configurado usando o modelo desenvolvido por Marco Severo
       </h2>
-      <Canvas>
-        <ambientLight intensity={0.5} />
-        <mesh>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="blue" />
-        </mesh>
-        <OrbitControls />
-      </Canvas>
+
+      <div className="stage">
+        <Canvas>
+          <ambientLight intensity={0.5} />
+          <mesh>
+            <boxGeometry args={[1, 1, 1]} />
+            <meshStandardMaterial color="blue" />
+          </mesh>
+          <OrbitControls />
+        </Canvas>
+      </div>
 
       <footer>
         <nav aria-label="Redes sociais">
