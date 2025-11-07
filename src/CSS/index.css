@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root {
+  --font-title-primary: 'Kalnia', serif;
+  --color-title-primary: #f7c130;
+  --color-dark: #030c1a;
+  --color-light-gray : #ffffffb3;
+  --color-medium-gray: #4B4B4B;
+  --color-hard-gray: #353535;
+
+  width: 100vw;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--primary_color);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+body {
+  background-color: var(--color-hard-gray);
+  color: var(--color-light-gray );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.title {
+  font-family: var(--font-title-primary);
+  font-size: 6vw;
+  color: var(--color-title-primary);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.menu_social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.menu_social a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  color: var(--color-light-gray);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.menu_social span {
+  position: absolute;
+  text-indent: -200px;
+}
+
+.menu_social a:hover {
+  color: var(--color-title-primary);
+}
+
+@media only screen and (min-width: 1024px) {
+  .app_title {
+    font-size: 5vw;
+  }
+}
