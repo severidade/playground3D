@@ -1,5 +1,25 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+/* eslint-disable react/no-unknown-property */
+import * as THREE from 'three';
+
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Box, OrbitControls } from '@react-three/drei';
+import { useRef } from 'react';
+
+function TestBox() {
+  const boxRef = useRef<THREE.Mesh>(null);
+
+  useFrame(() => {
+    if (boxRef.current) {
+      boxRef.current.rotation.y += 0.01;
+    }
+  });
+
+  return (
+    <Box ref={boxRef}>
+      <meshStandardMaterial color="#f7c130" />
+    </Box>
+  );
+}
 
 function App() {
   return (
@@ -10,14 +30,13 @@ function App() {
       </h2>
 
       <div className="stage">
-        <Canvas>
+        <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
           <ambientLight intensity={0.5} />
-          <mesh>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color="blue" />
-          </mesh>
+          <directionalLight position={[5, 5, 5]} intensity={2} />
+          <TestBox />
           <OrbitControls />
         </Canvas>
+
       </div>
 
       <footer>
