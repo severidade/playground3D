@@ -1,0 +1,30 @@
+.container_hero{
+  /* background-color: tomato; */
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+}
+
+.hero_text_block {
+  grid-row: 3 / 4;
+  /* background-color: tomato; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_title {
+  font-family: var(--font-title-primary);
+  font-size: 6vw;
+  color: var(--color-title-primary);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 2rem;
+  width: 100%;
+
+}

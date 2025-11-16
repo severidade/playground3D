@@ -1,0 +1,28 @@
+.menu_social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: tomato;
+}
+
+.social_item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  color: var(--color-light-gray);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.social_item:hover {
+  color: var(--color-title-primary);
+}
+
+.social_link_text {
+  position: absolute;
+  text-indent: -200px;
+}
