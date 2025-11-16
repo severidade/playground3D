@@ -18,14 +18,13 @@ function MacBook() {
   useEffect(() => {
     if (!groupRef.current || !topRef.current || !bottomRef.current) return;
 
-    gsap
-      .to(groupRef.current.position, {
-        y: '-=0.05',
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut',
-      });
+    const floatAnimation = gsap.to(groupRef.current.position, {
+      y: '-=0.05',
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut',
+    });
 
     gsap
       .timeline({
@@ -34,6 +33,12 @@ function MacBook() {
           start: 'top bottom',
           end: 'top top',
           scrub: true,
+          onEnter: () => {
+            floatAnimation.pause();
+          },
+          onLeaveBack: () => {
+            floatAnimation.resume(); // 🔄 volta a flutuar se subir a página
+          },
         },
       })
       .to(
