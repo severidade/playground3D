@@ -7,7 +7,7 @@ function Section1() {
             Top of Class Performance
           </h2>
           <p>
-            Handle the most computationally intensive tasks with ease.
+            Encare tarefas computacionais intensas com facilidade.
           </p>
         </div>
       </div>

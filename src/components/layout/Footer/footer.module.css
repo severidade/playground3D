@@ -3,7 +3,11 @@
   gap: 1.5rem;
   justify-content: center;
   margin-top: 2rem;
-  background-color: tomato;
+  /* background-color: tomato; */
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social_item {

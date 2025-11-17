@@ -20,7 +20,7 @@
 
 .hero_title {
   font-family: var(--font-title-primary);
-  font-size: 6vw;
+  font-size: 8rem;
   color: var(--color-title-primary);
   text-align: center;
   line-height: 1;

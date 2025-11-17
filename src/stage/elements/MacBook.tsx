@@ -46,7 +46,7 @@ function MacBook() {
       .to(
         groupRef.current.rotation,
         {
-          y: Math.PI - 0.6,
+          y: Math.PI - 0.8,
           ease: 'power2.inOut',
         },
         '>', /* grupo gira depois da animação anterior */

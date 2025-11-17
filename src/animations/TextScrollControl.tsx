@@ -16,7 +16,7 @@ function TextScrollControl() {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: '#section1',
+          trigger: '#section1', /* será  uma prop 8 */
           start: 'top bottom',
           end: '30% bottom',
           scrub: true,
@@ -24,6 +24,34 @@ function TextScrollControl() {
       })
       .to(text1, {
         opacity: 0,
+        ease: 'power2.inOut',
+      });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '#section1',
+          start: 'top 50%',
+          end: 'top top',
+          scrub: true,
+        },
+      })
+      .to(text2, {
+        opacity: 1,
+        ease: 'power2.inOut',
+      });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '#section2',
+          start: 'top 50%',
+          end: 'top top',
+          scrub: true,
+        },
+      })
+      .to(text3, {
+        opacity: 1,
         ease: 'power2.inOut',
       });
   }, []);

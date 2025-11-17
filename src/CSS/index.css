@@ -38,8 +38,6 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 
-
-
 .subtitle {
   text-align: center;
 }
@@ -66,15 +64,15 @@ body::-webkit-scrollbar {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;;
 }
-#section1 {
+/* #section1 {
   border:dashed olive;
 }
 
 #section2 {
   border:dashed tomato;
-}
+} */
 
 .container {
   width: 50vw;
@@ -95,6 +93,34 @@ body::-webkit-scrollbar {
   right: 0;
 }
 
+#text-2 {
+  opacity: 0;
+}
+
+#text-3 {
+  opacity: 0;
+}
+
+
+h2 {
+  font-family: var(--font-title-primary);
+  font-size: 8rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+  width: 100%;
+
+}
+
+p {
+  font-size: 2.4rem;
+
+}
+
+
+.text-block {
+  /* background: tomato; */
+  /* width: 50%; */
+}
 @media only screen and (min-width: 1024px) {
   .app_title {
     font-size: 5vw;
