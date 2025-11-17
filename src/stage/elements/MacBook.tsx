@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { useEffect, useRef } from 'react';
+import FloatAnimation from '../../animations/FloatAnimation.tsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,16 +16,10 @@ function MacBook() {
   const topRef = useRef<THREE.Group>(null);
   const bottomRef = useRef<THREE.Group>(null);
 
+  const { pause: pauseFloat, resume: resumeFloat } = FloatAnimation(groupRef);
+
   useEffect(() => {
     if (!groupRef.current || !topRef.current || !bottomRef.current) return;
-
-    const floatAnimation = gsap.to(groupRef.current.position, {
-      y: '-=0.05',
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut',
-    });
 
     gsap
       .timeline({
@@ -34,10 +29,10 @@ function MacBook() {
           end: 'top top',
           scrub: true,
           onEnter: () => {
-            floatAnimation.pause();
+            pauseFloat();
           },
           onLeaveBack: () => {
-            floatAnimation.resume(); // 🔄 volta a flutuar se subir a página
+            resumeFloat(); // 🔄 volta a flutuar se subir a página
           },
         },
       })
