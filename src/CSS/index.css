@@ -78,6 +78,7 @@ body::-webkit-scrollbar {
   width: 50vw;
   height: 100%;
   position: absolute;
+
   padding: 5vw;
   top: 0;
   display: flex;
