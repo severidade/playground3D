@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 function FloatAnimation(ref: React.RefObject<THREE.Group>): void {
   const animationRef = useRef<gsap.core.Tween | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!ref.current) return undefined;
 
     const floatAnimation = gsap.to(ref.current.position, {

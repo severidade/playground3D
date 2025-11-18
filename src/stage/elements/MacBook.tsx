@@ -3,7 +3,7 @@ import gsap from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import FloatAnimation from '../../animations/FloatAnimation.tsx';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +18,7 @@ function MacBook() {
 
   const { pause: pauseFloat, resume: resumeFloat } = FloatAnimation(groupRef);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!groupRef.current || !topRef.current || !bottomRef.current) return;
 
     gsap
