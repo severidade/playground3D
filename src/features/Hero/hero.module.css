@@ -1,5 +1,4 @@
 .container_hero{
-  /* background-color: tomato; */
   width: 100vw;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -11,11 +10,11 @@
 
 .hero_text_block {
   grid-row: 3 / 4;
-  /* background-color: tomato; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .hero_title {
@@ -24,7 +23,19 @@
   color: var(--color-title-primary);
   text-align: center;
   line-height: 1;
-  margin-bottom: 2rem;
   width: 100%;
 
+}
+.hero_scroll_cta	{
+  display: block;
+  padding: 1.5rem;
+  color: var(--color-medium-gray);
+  transition: color 0.2s ease;
+  background-color: var(--color-light-gray);
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.hero_scroll_cta:hover {
+  background-color: var(--color-title-primary);
 }
