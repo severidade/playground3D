@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function TextScrollControl() {
+function useScrollTextTransitions() {
   useLayoutEffect(() => {
     const text1 = document.getElementById('text-1');
     const text2 = document.getElementById('text-2');
@@ -56,4 +56,4 @@ function TextScrollControl() {
   }, []);
 }
 
-export default TextScrollControl;
+export default useScrollTextTransitions;

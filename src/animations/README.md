@@ -1,0 +1,2 @@
+- `/motion`: animações não vinculadas ao scrooll executadas de forma contínua ou controladas apenas pela timeline do GSAP. (looping, float, pulses, 3D motions)
+- `/scroll`: animações controladas pela rolagem da página, utilizando o ScrollTrigger do GSAP.

@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-function FloatAnimation(ref: React.RefObject<THREE.Group>): void {
+function useFloatAnimation(ref: React.RefObject<THREE.Group>): void {
   const animationRef = useRef<gsap.core.Tween | null>(null);
 
   useLayoutEffect(() => {
@@ -33,4 +33,4 @@ function FloatAnimation(ref: React.RefObject<THREE.Group>): void {
   return { pause, resume };
 }
 
-export default FloatAnimation;
+export default useFloatAnimation;
