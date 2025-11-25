@@ -3,12 +3,15 @@ import MainScene from './stage/scenes/MainScene.tsx';
 import useTextScrollControl from './animations/scroll/useScrollTextTransitions.tsx';
 import Footer from './components/layout/Footer/index.tsx';
 
-import { Hero, Section1, Section2 } from './features/index.ts';
+import {
+  Hero, Section1, Section2, BackgroundLayer,
+} from './features/index.ts';
 
 function App() {
   useTextScrollControl();
   return (
     <>
+      <BackgroundLayer />
       <Hero />
       <Section1 />
       <Section2 />
