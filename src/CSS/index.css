@@ -24,6 +24,7 @@ html {
 
 body {
   background-color: var(--color-hard-gray);
+  /* background: #3a2533; */
   color: var(--color-light-gray );
   display: flex;
   flex-direction: column;
