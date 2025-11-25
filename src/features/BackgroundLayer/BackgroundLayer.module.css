@@ -52,7 +52,7 @@
   height: 300%;
   background-image: url(./noise.png);
   background-repeat: repeat;
-  opacity: 0.03;
+  opacity: 0.1;
   animation: grain 6s steps(10) infinite;
   pointer-events: none;
   mix-blend-mode: color-dodge;

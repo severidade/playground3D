@@ -7,6 +7,7 @@ import DefaultLights from '../lights/DefaultLights.tsx';
 import MacBook from '../elements/MacBook.tsx';
 // import FloatingParticles from '../elements/FloatingParticles.tsx';
 // import FloatingConfetti from '../elements/FloatingConfetti.tsx';
+import BackgroundScene from './BackgroundScene/BackgroundScene.tsx';
 
 function MainScene() {
   return (
@@ -23,6 +24,7 @@ function MainScene() {
         {/* <FloatingParticles count={50} />
         <FloatingConfetti count={20} /> */}
       </Canvas>
+      <BackgroundScene />
     </div>
   );
 }
