@@ -11,7 +11,6 @@ function App() {
   useTextScrollControl();
   return (
     <>
-      {/* <BackgroundLayer /> */}
       <Hero />
       <Section1 />
       <Section2 />
