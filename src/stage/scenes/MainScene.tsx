@@ -5,14 +5,15 @@ import { OrbitControls, ContactShadows } from '@react-three/drei';
 
 import DefaultLights from '../lights/DefaultLights.tsx';
 import MacBook from '../elements/MacBook.tsx';
-// import FloatingParticles from '../elements/FloatingParticles.tsx';
-// import FloatingConfetti from '../elements/FloatingConfetti.tsx';
-import BackgroundScene from './BackgroundScene/BackgroundScene.tsx';
+import AnimatedBackground from '../../components/BackgroundShader/AnimatedBackground.tsx';
+// import CinematicBackground from '../../components/CinematicBackground/CinematicBackground.tsx';
 
 function MainScene() {
   return (
     <div className="stage">
+      <AnimatedBackground />
       <Canvas camera={{ position: [0, 0, 1], fov: 60 }}>
+        {/* <CinematicBackground /> */}
         <DefaultLights />
         <MacBook />
         <OrbitControls
@@ -21,10 +22,7 @@ function MainScene() {
           maxDistance={8}
         />
         <ContactShadows opacity={0.9} position={[0, -0.48, 0]} />
-        {/* <FloatingParticles count={50} />
-        <FloatingConfetti count={20} /> */}
       </Canvas>
-      <BackgroundScene />
     </div>
   );
 }

@@ -4,14 +4,14 @@ import useTextScrollControl from './animations/scroll/useScrollTextTransitions.t
 import Footer from './components/layout/Footer/index.tsx';
 
 import {
-  Hero, Section1, Section2, BackgroundLayer,
+  Hero, Section1, Section2,
 } from './features/index.ts';
 
 function App() {
   useTextScrollControl();
   return (
     <>
-      <BackgroundLayer />
+      {/* <BackgroundLayer /> */}
       <Hero />
       <Section1 />
       <Section2 />
