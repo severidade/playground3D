@@ -37,8 +37,12 @@ const BackgroundMaterial = shaderMaterial(
       float time_factor = u_time * 0.1;
       vec2 noise_coord = vUv * 5.0 + time_factor;
       float noise_val = noise(noise_coord);
-      color += noise_val * 0.2;
+      color += noise_val * 0.09;
 
+      // vinehta
+      float vignette = smoothstep(0.9, 0.4, length(vUv - 0.5));
+      color *= vignette;
+    
       gl_FragColor = vec4(color, 1.0);
     }
   `,
