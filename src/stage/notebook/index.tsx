@@ -11,12 +11,13 @@ function Notebook() {
     <Canvas camera={{ position: [0, 0, 1], fov: 60 }}>
       <DefaultLights />
       <MacBook />
+      {/* <MacBook scale={0.5} /> */}
       <OrbitControls
         enableZoom
         minDistance={2} // distância mínima (zoom máximo)
         maxDistance={8}
       />
-      <ContactShadows opacity={0.9} position={[0, -0.48, 0]} />
+      <ContactShadows opacity={0.9} position={[0, -0.5, 0]} />
     </Canvas>
   );
 }

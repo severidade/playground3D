@@ -7,24 +7,29 @@ gsap.registerPlugin(ScrollTrigger);
 function useScrollTextTransitions() {
   useLayoutEffect(() => {
     const text1 = document.getElementById('text-1');
+    const cta = document.getElementById('cta');
     const text2 = document.getElementById('text-2');
     const text3 = document.getElementById('text-3');
 
-    if (!text1 || !text2 || !text3) return;
+    if (!text1 || !cta || !text2 || !text3) return;
 
     gsap
       .timeline({
         scrollTrigger: {
           trigger: '#section1',
           start: 'top bottom',
-          end: '50% bottom',
+          end: '15% bottom',
           scrub: true,
         },
       })
       .to(text1, {
         opacity: 0,
         ease: 'power2.inOut',
-      });
+      })
+      .to(cta, {
+        opacity: 0,
+        ease: 'power2.inOut',
+      }, '>');
 
     gsap
       .timeline({

@@ -103,9 +103,10 @@ function MacBook() {
   return (
     <group
       ref={groupRef}
-      position={[0, -0.4, 0]}
+      // position={[0, -0.4, 0]}
+      position={[0, -0.3, 0]}
       rotation={[Math.PI / 2, 0, 0]}
-      scale={0.4}
+      scale={0.27}
     >
       <primitive ref={topRef} object={topModel.scene} />
       <primitive ref={bottomRef} object={bottomModel.scene} />
