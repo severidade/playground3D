@@ -25,6 +25,8 @@ function MacBook() {
       .timeline({
         scrollTrigger: {
           trigger: '#section1',
+          markers: true,
+          id: 'section1',
           start: 'top bottom',
           end: 'top top',
           scrub: true,
@@ -36,43 +38,55 @@ function MacBook() {
           },
         },
       })
+
+      // gira o notebook da posicao vertical para a horizontal
+      .to(groupRef.current?.rotation, { x: 0, ease: 'power2.inOut' })
+
+      // coloca o notebook "na mesa"
       .to(
-        groupRef.current?.rotation,
+        groupRef.current.position,
         {
-          x: 0,
+          y: -0.45,
           ease: 'power2.inOut',
         },
+        '<', // O '<' garante que ele pare de flutuar ao mesmo tempo que gira no próprio eixo
       )
+
+      // Depois que isso tudo acontecer girar no eixo vertical todo o objeto
       .to(
         groupRef.current.rotation,
         {
-          y: Math.PI - 0.8,
+          y: Math.PI - 0.9,
           ease: 'power2.inOut',
         },
         '>', /* grupo gira depois da animação anterior */
       )
+
+      // Junto com a animação anterior girar o como se estivesse abrindo o computador
       .to(
         topRef.current.rotation,
         {
-          x: Math.PI / 2 + 0.1,
+          x: Math.PI / 2 + 0.3,
         },
         '<', /* junto com a animação o tampo do computador abre */
       )
+
       .to(
         groupRef.current.position,
         {
-          x: 1.1,
+          x: 1,
           ease: 'power2.inOut', /* desloca o grupo todo ao meso tempo no eixo  x */
         },
         '<',
       )
+
       .to(
         groupRef.current.scale,
         {
           x: 0.33,
           y: 0.33,
           z: 0.33,
-          ease: 'power2.inOut', /* Reduz todo o grupo ao mesmo tempo  */
+          ease: 'power2.inOut', /* aumenta todo o grupo ao mesmo tempo  */
         },
         '<',
       );
@@ -81,6 +95,8 @@ function MacBook() {
       .timeline({
         scrollTrigger: {
           trigger: '#section2',
+          markers: true,
+          id: 'section2',
           start: 'top bottom',
           end: 'top top',
           scrub: true,
@@ -103,8 +119,7 @@ function MacBook() {
   return (
     <group
       ref={groupRef}
-      // position={[0, -0.4, 0]}
-      position={[0, -0.3, 0]}
+      position={[0, -0.2, 0]}
       rotation={[Math.PI / 2, 0, 0]}
       scale={0.27}
     >

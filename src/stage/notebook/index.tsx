@@ -18,6 +18,8 @@ function Notebook() {
         maxDistance={8}
       />
       <ContactShadows opacity={0.9} position={[0, -0.5, 0]} />
+      <axesHelper args={[3]} />
+      <gridHelper args={[10, 10]} />
     </Canvas>
   );
 }

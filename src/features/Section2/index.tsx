@@ -1,4 +1,4 @@
-function Section1() {
+function Section2() {
   return (
     <section id="section2">
       <div className="container container_right">
@@ -15,4 +15,4 @@ function Section1() {
   );
 }
 
-export default Section1;
+export default Section2;
